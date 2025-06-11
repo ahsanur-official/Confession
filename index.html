@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Confession 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@300;400;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="bg-hearts"></div>
+  <div class="container">
+    <h1>To My Special Someone 💖</h1>
+
+    <p id="introText">
+      From the moment I saw you, my world changed forever.<br>
+      Your smile lights up even my darkest days,<br>
+      and your laughter is the sweetest melody I've ever heard.<br>
+      Every moment spent with you feels like a beautiful dream.<br>
+      I can’t keep this in anymore —<br>
+      I’m completely, hopelessly in love with you.<br>
+      Will you let me be the one to hold your heart?<br>
+      Are you ready to hear the rest of my feelings?
+    </p>
+
+    <button id="startBtn">Check 💌</button>
+
+    <div class="love-messages" id="loveMessages" style="display:none;">
+      <p>You light up my world like nobody else 🌟</p>
+      <p>Being with you feels like a dream I never want to wake up from 💫</p>
+      <p>Every smile of yours is a gift to my heart 💝</p>
+      <p>I love you more with each passing day 💗</p>
+      <p>Will you be mine, forever and always? 💍</p>
+    </div>
+
+    <div id="decisionButtons" style="display:none;">
+      <button onclick="showDecisionPopup('accept')">Accept 💗</button>
+      <button onclick="showDecisionPopup('reject')">Reject 🙁</button>
+    </div>
+  </div>
+
+  <div class="popup" id="popup">
+    <h2 id="popupTitle"></h2>
+    <p id="popupMessage"></p>
+    <button class="close-btn" onclick="closePopup()">Close</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

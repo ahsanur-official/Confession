@@ -1,0 +1,342 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url(image.png);
+  font-family: 'Open Sans', sans-serif;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: #e60073;
+  animation: fadeInDown 1s ease forwards;
+}
+
+#introText {
+  font-size: 1.2rem;
+  margin: 20px 0;
+  color: #f1e3e3;
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.5s;
+}
+
+button {
+  background-color: #e60073;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 10px;
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 1s;
+}
+
+button:hover {
+  background-color: #cc005f;
+}
+
+.love-messages p {
+  opacity: 0;
+  font-size: 1.2rem;
+  margin: 15px 0;
+  color: #f1e3e3;
+  animation-fill-mode: forwards;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background: white;
+  padding: 25px 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  text-align: center;
+  width: 90%;
+  max-width: 350px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.popup.active {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.popup h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.6rem;
+  color: #e60073;
+  margin-bottom: 10px;
+}
+
+.popup p {
+  color: #f1e3e3;
+  font-size: 1rem;
+  margin-bottom: 18px;
+  padding: 0 5px;
+}
+
+.close-btn {
+  background-color: #aaa;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.close-btn:hover {
+  background-color: #888;
+}
+
+
+.close-btn:hover {
+  background-color: #888;
+}
+
+.bg-hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+/* Animations */
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOutUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes fadeInSlideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Love messages style & animation control */
+.love-messages p {
+  opacity: 0;
+  font-size: 1.2rem;
+  margin: 15px 0;
+  color: #555;
+  animation-fill-mode: forwards;
+}
+
+/* Decision buttons fade */
+#decisionButtons {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  display: none;
+  /* hidden initially */
+}
+
+/* Responsive for mobile devices */
+/* Large screens: up to 1080px */
+@media (max-width: 1080px) {
+  .container {
+    padding: 40px 30px;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  #introText,
+  .love-messages p {
+    font-size: 1.1rem;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 12px 25px;
+  }
+
+  .popup {
+    width: 85%;
+    max-width: 500px;
+    padding: 25px;
+  }
+}
+
+/* Tablets: up to 768px */
+@media (max-width: 768px) {
+  .container {
+    padding: 35px 20px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  #introText,
+  .love-messages p {
+    font-size: 1rem;
+  }
+
+  button {
+    padding: 12px 22px;
+    font-size: 0.95rem;
+    border-radius: 20px;
+  }
+
+  .popup {
+    width: 90%;
+    max-width: 400px;
+    padding: 22px;
+  }
+}
+
+/* Small devices: up to 600px */
+@media (max-width: 600px) {
+  .container {
+    padding: 30px 15px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  #introText,
+  .love-messages p {
+    font-size: 0.95rem;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    border-radius: 18px;
+    margin: 8px;
+  }
+
+  .popup {
+    width: 90vw;
+    max-width: 90vw;
+    padding: 20px 15px;
+  }
+
+  .popup h2 {
+    font-size: 1.5rem;
+  }
+
+  .popup p {
+    font-size: 1rem;
+  }
+
+  .close-btn {
+    padding: 8px 14px;
+    border-radius: 14px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Very small screens: up to 480px */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.9rem;
+  }
+
+  #introText,
+  .love-messages p {
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 0.85rem;
+    padding: 9px 18px;
+  }
+
+  .popup {
+    width: 92vw;
+    max-width: 92vw;
+    padding: 18px 14px;
+    font-size: 0.9rem;
+  }
+
+  .popup h2 {
+    font-size: 1.4rem;
+  }
+
+  .popup p {
+    font-size: 0.95rem;
+  }
+
+  .close-btn {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+}
