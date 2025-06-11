@@ -11,20 +11,41 @@
 </head>
 
 <body>
+  <audio id="bgMusic" autoplay loop muted playsinline>
+    <source src="simple-ballad-for-you-1562.mp3" type="audio/mpeg" />
+  </audio>
+
+
+  <div id="floatingShapes1" class="floating-hearts"></div>
+  <div id="floatingShapes2" class="floating-hearts"></div>
+  <div id="floatingShapes3" class="floating-hearts"></div>
+  <div id="floatingShapes4" class="floating-hearts"></div>
+  <div id="floatingShapes5" class="floating-hearts"></div>
+
+
   <div class="bg-hearts"></div>
   <div class="container">
-    <h1>To My Special Someone 💖</h1>
+    <h1>To My Special Someone 💖✨</h1>
 
     <p id="introText">
-      From the moment I saw you, my world changed forever.<br>
-      Your smile lights up even my darkest days,<br>
-      and your laughter is the sweetest melody I've ever heard.<br>
-      Every moment spent with you feels like a beautiful dream.<br>
-      I can’t keep this in anymore —<br>
-      I’m completely, hopelessly in love with you.<br>
-      Will you let me be the one to hold your heart?<br>
-      Are you ready to hear the rest of my feelings?
+      From the moment I saw you, my world changed forever. 🌍❤️<br><br>
+
+      Your smile lights up even my darkest days. 😊✨<br><br>
+
+      And your laughter is the sweetest melody I've ever heard. 🎶💖<br><br>
+
+      Every moment spent with you feels like a beautiful dream. 🌸💫<br><br>
+
+      I can’t keep this in anymore — 💌<br><br>
+
+      I’m completely, hopelessly in love with you. 💘🥹<br><br>
+
+      Will you let me be the one to hold your heart? 💞🤲<br><br>
+
+      Are you ready to hear the rest of my feelings? 🌹❣️
     </p>
+
+
 
     <button id="startBtn">Check 💌</button>
 
@@ -42,11 +63,14 @@
     </div>
   </div>
 
-  <div class="popup" id="popup">
-    <h2 id="popupTitle"></h2>
-    <p id="popupMessage"></p>
-    <button class="close-btn" onclick="closePopup()">Close</button>
+  <div id="popup" class="popup">
+    <div class="popup-inner">
+      <h2 id="popupTitle">Title</h2>
+      <p id="popupMessage">Message goes here...</p>
+      <button class="close-btn">Close</button>
+    </div>
   </div>
+
 
   <script src="script.js"></script>
 </body>
